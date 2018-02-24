@@ -1,0 +1,41 @@
+﻿Windows MongoDB version 3.6 64-bit
+1. 下载
+官网：https://www.mongodb.com/download-center?jmp=nav#atlas
+
+2. 安装
+双击文件：mongodb-win32-x86_64-2008plus-ssl-3.6.3-signed.msi
+自定义路径，一路回车
+
+3.创建配置文件,可自定义（e.g. mongo.ctf）
+内容如下：
+#配置mongodb数据的存储路径
+dbpath=E:\Applications\MongoDB\data\db
+#配置mongodb日志文件
+logpath=E:\Applications\MongoDB\logs\mongo.log
+#配置端口，若不配置，默认27017端口
+#port=40001
+
+4. 创建配置文件中的路径和文件
+E:\Applications\MongoDB\data\db
+E:\Applications\MongoDB\logs\mongo.log
+
+5. 控制台执行：
+mongod -f E:\Applications\MongoDB\mongo.ctf
+
+6. 再开一个控制台
+mongo -host 127.0.0.1 --port 27017
+或者
+mongo --port 27017
+或者
+mongo
+
+接着输入：db 回车
+默认数据库test
+
+启动已完成
+
+*****************
+一键启动：MongoDB.bat
+
+
+
